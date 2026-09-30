@@ -71,18 +71,24 @@
       background: var(--burgundy-deep);
       overflow: hidden;
     }
+
     .hero::before {
       content: '';
       position:absolute; inset:0;
       background: linear-gradient(180deg, rgba(59,11,25,.1) 15%, rgba(59,11,25,.18) 35%, rgba(59,11,25,.92) 100%);
       z-index:1;
     }
-    .hero-photo {
-      position:absolute; inset:0;
-      width:100%; height:100%; object-fit:cover; object-position:top 10%;
-      filter: saturate(.92) contrast(1.02);
-      transform: scale(1.02);
-    }
+  
+  .hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: saturate(.92) contrast(1.02);
+  transform: scale(1.01);
+}
     .hero-grain { position:absolute; inset:0; opacity:.12; z-index:2; pointer-events:none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E"); }
     .hero-content { position:relative; z-index:3; width:100%; padding: 150px 0 72px; }
     .eyebrow { text-transform:uppercase; letter-spacing:.32em; font-size:.69rem; font-weight:700; color:var(--lime); }
