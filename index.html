@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#65152b">
+  <meta name="description" content="The wedding of Prudence Okeoghene Emudianughe & Promise Eberechukwu Nwanozie — October 2026.">
+  <title>Prudence & Promise — Our Wedding</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- AOS + GLightbox -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/css/glightbox.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --burgundy: #65152b;
+      --burgundy-deep: #3b0b19;
+      --burgundy-soft: #8c2947;
+      --lime: #b7d334;
+      --lime-dark: #7e9414;
+      --gold: #c9a44d;
+      --gold-light: #ead69a;
+      --cream: #fbf7ee;
+      --paper: #fffdf8;
+      --ink: #24191b;
+      --muted: #796a6d;
+      --line: rgba(101, 21, 43, .13);
+      --shadow: 0 24px 70px rgba(59, 11, 25, .12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4,h5 { font-family: 'Cormorant Garamond', serif; }
+    a { color: inherit; }
+    .script { font-family: 'Great Vibes', cursive; }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+
+    /* NAV */
+    .navbar {
+      background: rgba(59, 11, 25, .92);
+      backdrop-filter: blur(16px);
+      transition: .35s ease;
+      padding: 13px 0;
+    }
+    .navbar.scrolled { box-shadow: 0 8px 35px rgba(0,0,0,.15); }
+    .navbar-brand { color: #fff !important; font-family: 'Cormorant Garamond'; font-size: 1.6rem; line-height: .85; }
+    .navbar-brand small { display:block; font: 500 .58rem 'DM Sans'; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-light); }
+    .navbar .nav-link { color: rgba(255,255,255,.78); font-size: .77rem; text-transform: uppercase; letter-spacing: .12em; margin-left: 13px; }
+    .navbar .nav-link:hover, .navbar .nav-link.active { color: var(--lime); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      background: var(--burgundy-deep);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(59,11,25,.1) 15%, rgba(59,11,25,.18) 35%, rgba(59,11,25,.92) 100%);
+      z-index:1;
+    }
+    .hero-photo {
+      position:absolute; inset:0;
+      width:100%; height:100%; object-fit:cover; object-position:top 10%;
+      filter: saturate(.92) contrast(1.02);
+      transform: scale(1.02);
+    }
+    .hero-grain { position:absolute; inset:0; opacity:.12; z-index:2; pointer-events:none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E"); }
+    .hero-content { position:relative; z-index:3; width:100%; padding: 150px 0 72px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.32em; font-size:.69rem; font-weight:700; color:var(--lime); }
+    .hero h1 { color:#fff; font-size: clamp(4rem, 10vw, 8.5rem); line-height:.78; margin: 15px 0 25px; font-weight:500; }
+    .hero .amp { color:var(--gold); font-style:italic; }
+    .hero-date { color:#fff; font-size:.92rem; letter-spacing:.2em; text-transform:uppercase; }
+    .hero-line { height:1px; width:70px; background:var(--gold); margin:20px 0; }
+    .hero-caption { max-width:600px; color:rgba(255,255,255,.78); font-size:.95rem; line-height:1.8; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .btn-wedding { border:1px solid var(--gold); color:#fff; padding:12px 21px; border-radius:0; text-transform:uppercase; letter-spacing:.13em; font-size:.7rem; font-weight:700; }
+    .btn-wedding:hover { background:var(--gold); color:var(--burgundy-deep); }
+    .btn-lime { background:var(--lime); border:1px solid var(--lime); color:var(--burgundy-deep); padding:12px 21px; border-radius:0; text-transform:uppercase; letter-spacing:.13em; font-size:.7rem; font-weight:700; }
+    .btn-lime:hover { background:#d0e74c; color:var(--burgundy-deep); }
+
+    .date-ribbon { position:absolute; right:6%; bottom:55px; z-index:4; width:150px; height:150px; border:1px solid rgba(234,214,154,.65); border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; background:rgba(59,11,25,.38); backdrop-filter:blur(5px); }
+    .date-ribbon::before { content:''; position:absolute; inset:8px; border:1px dashed rgba(234,214,154,.45); border-radius:50%; }
+    .date-ribbon span { position:relative; font-family:'Cormorant Garamond'; font-size:1.05rem; line-height:1.05; }
+    .date-ribbon strong { display:block; color:var(--gold-light); font-size:1.7rem; }
+
+    /* SECTION */
+    section { padding: 105px 0; position:relative; }
+    .section-kicker { color:var(--burgundy); text-transform:uppercase; font-weight:700; letter-spacing:.27em; font-size:.67rem; }
+    .section-title { font-size:clamp(2.7rem, 5vw, 4.8rem); line-height:.9; font-weight:500; color:var(--burgundy-deep); }
+    .section-intro { max-width:650px; color:var(--muted); line-height:1.85; }
+    .gold-rule { display:flex; align-items:center; gap:12px; margin:20px 0; }
+    .gold-rule::before { content:''; width:55px; height:1px; background:var(--gold); }
+    .gold-rule span { width:6px; height:6px; background:var(--lime); transform:rotate(45deg); }
+
+    /* INTRO */
+    .intro-card { background:var(--paper); border:1px solid var(--line); box-shadow:var(--shadow); padding:45px; position:relative; overflow:hidden; }
+    .intro-card::after { content:'P & P'; position:absolute; right:-15px; bottom:-35px; color:rgba(101,21,43,.045); font: 12rem/1 'Great Vibes'; }
+    .intro-card p { position:relative; z-index:1; }
+    .quote { font: 500 2rem/1.15 'Cormorant Garamond'; color:var(--burgundy); }
+
+    /* EVENT CARDS */
+    .event-card { background:#fff; height:100%; border:1px solid var(--line); position:relative; overflow:hidden; transition:.3s ease; }
+    .event-card:hover { transform:translateY(-6px); box-shadow:var(--shadow); }
+    .event-card-img { height:260px; object-fit:cover; width:100%; }
+    .event-body { padding:32px; }
+    .event-number { color:var(--gold); font:600 1rem 'Cormorant Garamond'; }
+    .event-title { font-size:2.4rem; color:var(--burgundy); margin:3px 0 12px; }
+    .event-meta { color:var(--muted); font-size:.83rem; line-height:1.75; }
+    .event-meta i { color:var(--lime-dark); margin-right:7px; }
+
+    /* GALLERY */
+    #gallery { background:var(--burgundy-deep); color:#fff; }
+    #gallery .section-kicker { color:var(--lime); }
+    #gallery .section-title { color:#fff; }
+    #gallery .section-intro { color:rgba(255,255,255,.65); }
+    .gallery-grid { display:grid; grid-template-columns:repeat(12,1fr); grid-auto-rows:90px; gap:12px; margin-top:45px; }
+    .gallery-item { position:relative; overflow:hidden; display:block; background:#241018; }
+    .gallery-item img { width:100%; height:100%; object-fit:cover; transition:.5s ease; }
+    .gallery-item:hover img { transform:scale(1.06); }
+    .g1 {grid-column:span 5;grid-row:span 5}.g2{grid-column:span 3;grid-row:span 3}.g3{grid-column:span 4;grid-row:span 4}.g4{grid-column:span 3;grid-row:span 4}.g5{grid-column:span 4;grid-row:span 3}.g6{grid-column:span 5;grid-row:span 4}.g7{grid-column:span 4;grid-row:span 4}.g8{grid-column:span 4;grid-row:span 3}.g9{grid-column:span 4;grid-row:span 4}
+
+    /* RAPS */
+    .raps-wrap { background:var(--burgundy); color:#fff; padding:45px; position:relative; overflow:hidden; }
+    .raps-wrap::before { content:'RAPS'; position:absolute; right:-30px; top:-50px; font:13rem/.8 'Great Vibes'; color:rgba(255,255,255,.035); }
+    .raps-tag { display:inline-block; border:1px solid rgba(234,214,154,.5); color:var(--gold-light); padding:7px 11px; font-size:.65rem; letter-spacing:.16em; text-transform:uppercase; }
+    .raps-title { font-size:clamp(3rem,6vw,5.5rem); color:#fff; line-height:.85; }
+    .mail-frame { background:#fff; color:var(--ink); border:8px solid #eadfd0; box-shadow:0 15px 45px rgba(0,0,0,.2); padding:26px; transform:rotate(-1deg); }
+    .mail-frame:nth-child(2) { transform:rotate(1.2deg); }
+    .mail-line { border-bottom:1px solid #ddd; padding:8px 0; font-size:.72rem; color:#766c6e; }
+    .mail-paper { padding:25px 5px 8px; font:500 1.5rem/1.25 'Cormorant Garamond'; color:var(--burgundy); }
+    .mail-placeholder { border:1px dashed var(--gold); background:#fffaf0; color:#806f56; padding:22px; font-size:.78rem; }
+
+    /* DIRECTIONS */
+    .route-card { background:#fff; border:1px solid var(--line); height:100%; padding:28px; transition:.25s; }
+    .route-card:hover { box-shadow:var(--shadow); }
+    .route-icon { width:43px; height:43px; display:grid; place-items:center; background:rgba(183,211,52,.17); color:var(--lime-dark); border-radius:50%; margin-bottom:17px; }
+    .route-card h4 { font-size:1.8rem; color:var(--burgundy); }
+    .route-card p { color:var(--muted); font-size:.84rem; line-height:1.75; }
+    .map-panel { background:var(--burgundy-deep); color:#fff; padding:45px; min-height:100%; display:flex; flex-direction:column; justify-content:center; }
+    .map-panel .address { font:500 2.2rem/1.05 'Cormorant Garamond'; color:var(--gold-light); }
+
+    /* PROGRAMME */
+    #programme { background:#fff; }
+    .programme-list { max-width:850px; margin:auto; border-top:1px solid var(--line); }
+    .programme-row { display:grid; grid-template-columns:130px 1fr; gap:25px; padding:24px 0; border-bottom:1px solid var(--line); }
+    .programme-time { font-weight:700; color:var(--burgundy); font-size:.78rem; letter-spacing:.08em; }
+    .programme-item { font:600 1.35rem 'Cormorant Garamond'; color:var(--ink); }
+    .programme-note { font-size:.76rem; color:var(--muted); margin-top:3px; }
+
+    /* GIVE */
+    #give { background:var(--cream); }
+    .give-card { background:#fff; border:1px solid var(--line); padding:35px; height:100%; position:relative; }
+    .bank-logo { width:58px; height:58px; display:grid; place-items:center; border-radius:50%; font-weight:800; letter-spacing:-.05em; }
+    .bank-logo.opay { background:#e9fff9; color:#1dbd92; }
+    .bank-logo.uba { background:#e9f0ff; color:#d71920; }
+    .account-name { font-size:.77rem; color:var(--muted); text-transform:uppercase; letter-spacing:.1em; }
+    .account-number { font:600 2.1rem 'Cormorant Garamond'; color:var(--burgundy); letter-spacing:.04em; }
+    .copy-btn { border:0; background:var(--cream); color:var(--burgundy); padding:9px 12px; font-size:.72rem; }
+    .give-note { border-left:3px solid var(--lime); padding-left:18px; color:var(--muted); font-size:.82rem; line-height:1.8; }
+    .wishlist { background:var(--burgundy-deep); color:#fff; padding:45px; height:100%; }
+    .wishlist h3 { color:var(--gold-light); font-size:2.8rem; }
+    .wishlist li { list-style:none; padding:9px 0; border-bottom:1px solid rgba(255,255,255,.1); color:rgba(255,255,255,.72); font-size:.82rem; }
+    .wishlist li i { color:var(--lime); margin-right:8px; }
+
+    /* FOOTER */
+    footer { background:#280810; color:rgba(255,255,255,.7); padding:70px 0 30px; }
+    footer .script { color:var(--gold-light); font-size:3.5rem; }
+    footer a { text-decoration:none; color:rgba(255,255,255,.7); }
+    footer a:hover { color:var(--lime); }
+    .footer-rule { height:1px; background:rgba(255,255,255,.1); margin:40px 0 22px; }
+
+    .back-top { position:fixed; bottom:22px; right:22px; width:42px; height:42px; background:var(--lime); color:var(--burgundy-deep); border:0; z-index:100; opacity:0; pointer-events:none; transition:.25s; }
+    .back-top.show { opacity:1; pointer-events:auto; }
+
+    @media (max-width: 991px) {
+      .date-ribbon { display:none; }
+      .navbar .nav-link { margin-left:0; padding:10px 0; }
+      .gallery-grid { grid-template-columns:repeat(2,1fr); grid-auto-rows:160px; }
+      .gallery-item { grid-column:span 1 !important; grid-row:span 1 !important; }
+      .g1 { grid-column:span 2 !important; grid-row:span 2 !important; }
+    }
+    @media (max-width: 575px) {
+      section { padding:75px 0; }
+      .hero-content { padding-bottom:55px; }
+      .hero h1 { font-size:4.4rem; }
+      .intro-card,.raps-wrap,.map-panel,.wishlist { padding:28px; }
+      .programme-row { grid-template-columns:95px 1fr; gap:15px; }
+      .programme-item { font-size:1.2rem; }
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Prudence <span class="amp">&</span> Promise<small>Our Wedding · 2026</small></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Open menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#raps">RAPS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#directions">Directions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#programme">Programme</a></li>
+        <li class="nav-item"><a class="nav-link" href="#give">Give</a></li>
+        <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <img class="hero-photo" src="https://res.cloudinary.com/iotstudent/image/upload/v1791286325/PSX_20260929_202809_zcrv0v.jpg" alt="Prudence and Promise">
+  <div class="hero-grain"></div>
+  <div class="container hero-content">
+    <div class="row">
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="eyebrow">A covenant · a celebration · a beginning</div>
+        <h1>Prudence <span class="amp">&</span><br>Promise</h1>
+        <div class="hero-date">October 2026 · Lagos, Nigeria</div>
+        <div class="hero-line"></div>
+        <p class="hero-caption">Two families. Two ceremonies. One beautiful promise before God, family and friends. Welcome to the little corner of the internet we made for our wedding.</p>
+        <div class="hero-actions">
+          <a class="btn btn-lime" href="#programme">See the programme</a>
+          <a class="btn btn-wedding" href="#directions">Find the church</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="date-ribbon"><span><small>CHURCH</small><strong>31</strong>OCT<br>2026</span></div>
+</header>
+
+<main>
+  <section id="story">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="section-kicker">Our story</div>
+          <h2 class="section-title mt-3">And then, somehow, it became <span class="script" style="color:var(--burgundy-soft)">us.</span></h2>
+          <div class="gold-rule"><span></span></div>
+          <p class="section-intro">Some stories are too personal to reduce to a few lines on a website. So this space is intentionally simple: a place for the memories, words and moments that brought Prudence and Promise here.</p>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="intro-card">
+            <p class="quote">“The best part of this story is not how it started. It is that we get to keep writing it together.”</p>
+            <p class="mt-4 mb-0 text-secondary" style="line-height:1.9">Our wedding is more than a date on a calendar. It is the joining of two people, two families, histories, friendships and futures. Thank you for being part of the people who have made this journey meaningful.</p>
+            <p class="script mt-4 mb-0" style="font-size:2.4rem;color:var(--gold)">With love, Prudence & Promise</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-5">
+        <div class="col-lg-6" data-aos="fade-up">
+          <article class="event-card">
+            <img class="event-card-img" src="https://res.cloudinary.com/iotstudent/image/upload/v1791286324/PSX_20260929_202436_yoefah.jpg" alt="Traditional wedding" loading="lazy">
+            <div class="event-body">
+              <div class="event-number">01 · TRADITIONAL</div>
+              <h3 class="event-title">Our traditional celebration</h3>
+              <p class="event-meta mb-3"><i class="bi bi-calendar3"></i> Saturday, 3 October 2026</p>
+              <p class="event-meta mb-0">A celebration of heritage, family and the beginning of a new household. The traditional rites mark the first of our two wedding celebrations.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <article class="event-card">
+            <img class="event-card-img" src="https://res.cloudinary.com/iotstudent/image/upload/v1791286988/Screenshot_2026-09-30_013345_bdq8cq.jpg" alt="This Excellent Church" loading="lazy">
+            <div class="event-body">
+              <div class="event-number">02 · HOLY MATRIMONY</div>
+              <h3 class="event-title">Our church wedding</h3>
+              <p class="event-meta mb-3"><i class="bi bi-calendar3"></i> Saturday, 31 October 2026 · 12 Noon WAT</p>
+              <p class="event-meta mb-0">The families of Mr & Mrs Prosper Emudianughe and Mr & Mrs Matthew Nwanozie cordially invite you to the solemnization of Holy Matrimony of their children.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <div class="row align-items-end">
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="section-kicker">The two of us</div>
+          <h2 class="section-title mt-3">A few frames from <span class="script" style="color:var(--gold-light)">our becoming.</span></h2>
+        </div>
+        <div class="col-lg-5" data-aos="fade-left">
+          <p class="section-intro mb-0">Open any photograph for the full view. We will keep adding memories here as the celebrations continue.</p>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <a href="https://res.cloudinary.com/iotstudent/image/upload/v1791286325/PSX_20260929_202809_zcrv0v.jpg" class="gallery-item g1 glightbox" data-gallery="wedding" data-title="Prudence & Promise"><img src="https://res.cloudinary.com/iotstudent/image/upload/v1791286325/PSX_20260929_202809_zcrv0v.jpg" alt="Prudence and Promise" loading="lazy"></a>
+        <a href="https://res.cloudinary.com/iotstudent/image/upload/v1791286324/PSX_20260929_202436_yoefah.jpg" class="gallery-item g2 glightbox" data-gallery="wedding"><img src="https://res.cloudinary.com/iotstudent/image/upload/v1791286324/PSX_20260929_202436_yoefah.jpg" alt="Wedding memory" loading="lazy"></a>
+        <a href="https://res.cloudinary.com/iotstudent/image/upload/v1791285923/PSX_20260929_202700_oeigh8.jpg" class="gallery-item g3 glightbox" data-gallery="wedding"><img src="https://res.cloudinary.com/iotstudent/image/upload/v1791285923/PSX_20260929_202700_oeigh8.jpg" alt="Wedding memory" loading="lazy"></a>
+        <a href="https://res.cloudinary.com/iotstudent/image/upload/v1791285920/PSX_20260929_201636_ncqd0c.jpg" class="gallery-item g4 glightbox" data-gallery="wedding"><img src="https://res.cloudinary.com/iotstudent/image/upload/v1791285920/PSX_20260929_201636_ncqd0c.jpg" alt="Wedding memory" loading="lazy"></a>
+        <a href="https://res.cloudinary.com/iotstudent/image/upload/v1791286323/PSX_20260929_202259_quzmjs.jpg" class="gallery-item g5 glightbox" data-gallery="wedding"><img src="https://res.cloudinary.com/iotstudent/image/upload/v1791286323/PSX_20260929_202259_quzmjs.jpg" alt="Wedding memory" loading="lazy"></a>
+        <a href="https://res.cloudinary.com/iotstudent/image/upload/v1791285921/PSX_20260929_202541_qkda3n.jpg" class="gallery-item g6 glightbox" data-gallery="wedding"><img src="https://res.cloudinary.com/iotstudent/image/upload/v1791285921/PSX_20260929_202541_qkda3n.jpg" alt="Wedding memory" loading="lazy"></a>
+        <a href="https://res.cloudinary.com/iotstudent/image/upload/v1791285899/PSX_20260929_201946_by6iyx.jpg" class="gallery-item g7 glightbox" data-gallery="wedding"><img src="https://res.cloudinary.com/iotstudent/image/upload/v1791285899/PSX_20260929_201946_by6iyx.jpg" alt="Wedding memory" loading="lazy"></a>
+        <a href="https://res.cloudinary.com/iotstudent/image/upload/v1791285898/PSX_20260929_202511_rduror.jpg" class="gallery-item g8 glightbox" data-gallery="wedding"><img src="https://res.cloudinary.com/iotstudent/image/upload/v1791285898/PSX_20260929_202511_rduror.jpg" alt="Wedding memory" loading="lazy"></a>
+        <a href="https://res.cloudinary.com/iotstudent/image/upload/v1791285919/PSX_20260929_202627_le3sac.jpg" class="gallery-item g9 glightbox" data-gallery="wedding"><img src="https://res.cloudinary.com/iotstudent/image/upload/v1791285919/PSX_20260929_202627_le3sac.jpg" alt="Wedding memory" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="raps">
+    <div class="container">
+      <div class="raps-wrap" data-aos="zoom-in">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <span class="raps-tag">RAPS · Rhythme & Poetry</span>
+            <h2 class="raps-title mt-4">The things we<br><span class="script" style="color:var(--lime)">wrote.</span></h2>
+            <p class="mt-4 mb-0" style="color:rgba(255,255,255,.68);line-height:1.85">A little archive of the words that belong to us — letters, emails, screenshots, poetry and the tiny pieces of our story that deserve to survive the wedding day.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="row g-4">
+              <!-- Replace these two visual placeholders with your RAPS email screenshot URLs when ready. -->
+              <div class="col-md-6">
+                <div class="mail-frame">
+                  <div class="mail-line"><strong>RAPS / 01</strong> · an old message</div>
+                  <div class="mail-line">From: <strong>Us</strong></div>
+                  <div class="mail-line">To: <strong>Us</strong></div>
+                  <div class="mail-paper">“There are words that only make sense when they belong to two people.”</div>
+                  <div class="mail-placeholder"><i class="bi bi-envelope-paper me-2"></i>Add the first RAPS screenshot URL in the HTML.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mail-frame">
+                  <div class="mail-line"><strong>RAPS / 02</strong> · another memory</div>
+                  <div class="mail-line">From: <strong>Us</strong></div>
+                  <div class="mail-line">To: <strong>Us</strong></div>
+                  <div class="mail-paper">“And somewhere between the ordinary days, we became a forever.”</div>
+                  <div class="mail-placeholder"><i class="bi bi-envelope-paper me-2"></i>Add the second RAPS screenshot URL in the HTML.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="directions">
+    <div class="container">
+      <div class="row g-5 align-items-stretch">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="section-kicker">Find us</div>
+          <h2 class="section-title mt-3">Come celebrate <span class="script" style="color:var(--burgundy-soft)">with us.</span></h2>
+          <div class="gold-rule"><span></span></div>
+          <p class="section-intro">Our church ceremony is at This Excellent Church in Ogudu GRA 2. The address below is the reference point; the route cards are simplified for Lagos public transport.</p>
+          <div class="map-panel mt-4">
+            <div class="eyebrow">Church venue</div>
+            <div class="address mt-3">This Excellent Church</div>
+            <p class="mt-3 mb-4" style="color:rgba(255,255,255,.68);font-size:.82rem;line-height:1.8">21c Otunba Toyin Abass Avenue,<br>Off Prince Adesoji Ajose Street,<br>New Road, Ogudu GRA 2, Lagos.</p>
+            <a class="btn btn-lime align-self-start" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=This%20Excellent%20Church%2C%2021c%20Otunba%20Toyin%20Abass%20Avenue%2C%20Ogudu%20GRA%202%2C%20Lagos">Open in Google Maps <i class="bi bi-arrow-up-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="row g-3">
+            <div class="col-md-6" data-aos="fade-up">
+              <div class="route-card"><div class="route-icon"><i class="bi bi-bus-front"></i></div><h4>Oshodi · Oke · Anthony · Gbagada</h4><p>Take a bus going towards <strong>Mowe–Berger</strong>. Alight at <strong>Estate-Alapere</strong>. Cross the pedestrian bridge to the other side, walk back off the road and look for the <strong>yellow building</strong> at the back of the church. Enter through the church premises.</p></div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+              <div class="route-card"><div class="route-icon"><i class="bi bi-building"></i></div><h4>Berger</h4><p>Take a bus going towards <strong>Cele</strong> and alight at <strong>Estate-Alapere</strong>. Walk off the main road and look for the yellow building behind the church. Enter through the church premises.</p></div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="route-card"><div class="route-icon"><i class="bi bi-sign-turn-right"></i></div><h4>Yaba</h4><p>Make your way towards <strong>Third Mainland / Ketu</strong>, then continue towards <strong>Alapere</strong>. Alight around Estate-Alapere and use the pedestrian bridge to cross, then follow the yellow-building landmark to the church.</p></div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+              <div class="route-card"><div class="route-icon"><i class="bi bi-water"></i></div><h4>Lagos Island</h4><p>Head towards <strong>Third Mainland Bridge</strong> and continue through the Ketu/Alapere corridor. From Estate-Alapere, cross the pedestrian bridge and use the yellow building behind the church as your final landmark.</p></div>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+              <div class="route-card"><div class="route-icon"><i class="bi bi-compass"></i></div><h4>Ota · Iyana Ipaja</h4><p>Take a bus towards <strong>Oshodi</strong>. From Oshodi Oke, take a bus going towards <strong>Mowe–Berger</strong> and alight at <strong>Estate-Alapere</strong>. Cross the pedestrian bridge, walk back off the road and look for the yellow building behind the church.</p></div>
+            </div>
+          </div>
+          <div class="alert mt-4 mb-0" style="background:#fff7df;border:1px solid #ead69a;color:#6e5a27;font-size:.78rem;line-height:1.7"><i class="bi bi-info-circle me-2"></i><strong>Lagos route note:</strong> Public-transport routes can change with traffic, road works and bus availability. When in doubt, use the exact church address in Google Maps and call one of the RSVP contacts.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programme">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <div class="section-kicker">31 October · 12 Noon WAT</div>
+        <h2 class="section-title mt-3">Order of <span class="script" style="color:var(--burgundy-soft)">programme</span></h2>
+        <p class="section-intro mx-auto">A clean programme for the solemnization of Holy Matrimony. Update the rows below with the final church order when confirmed.</p>
+      </div>
+      <div class="programme-list mt-5" data-aos="fade-up">
+        <div class="programme-row"><div class="programme-time">12:00 PM</div><div><div class="programme-item">Arrival & seating</div><div class="programme-note">Guests are encouraged to be seated before the ceremony begins.</div></div></div>
+        <div class="programme-row"><div class="programme-time">12:15 PM</div><div><div class="programme-item">Processional</div><div class="programme-note">The bridal party and families enter.</div></div></div>
+        <div class="programme-row"><div class="programme-time">12:30 PM</div><div><div class="programme-item">Solemnization of Holy Matrimony</div><div class="programme-note">The vows, prayers and marriage rites.</div></div></div>
+        <div class="programme-row"><div class="programme-time">—</div><div><div class="programme-item">Scripture · Sermon · Blessing</div><div class="programme-note">A celebration of the covenant before God and His people.</div></div></div>
+        <div class="programme-row"><div class="programme-time">—</div><div><div class="programme-item">Signing & photographs</div><div class="programme-note">Family and couple photographs.</div></div></div>
+        <div class="programme-row"><div class="programme-time">—</div><div><div class="programme-item">Departure</div><div class="programme-note">Thank you for celebrating this sacred moment with us.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="give">
+    <div class="container">
+      <div class="row align-items-end g-4 mb-5">
+        <div class="col-lg-7"><div class="section-kicker">A blessing</div><h2 class="section-title mt-3">If you would like to <span class="script" style="color:var(--burgundy-soft)">give.</span></h2></div>
+        <div class="col-lg-5"><p class="section-intro mb-0">Your presence, prayers and love mean more to us than anything. For friends and family who would like to bless our home financially, the details are below.</p></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="give-card">
+            <div class="d-flex align-items-center gap-3 mb-4"><div class="bank-logo opay"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Opay_Digital_Services_Limited.png" alt="OPay logo" style="width:42px;height:42px;object-fit:contain"></div><div><div class="account-name">OPay</div><div class="h5 mb-0" style="font-family:'Cormorant Garamond';color:var(--burgundy)">Mobile transfer</div></div></div>
+            <div class="account-name">Account name</div><div class="account-number">Nwanozie Promise</div>
+            <div class="account-name mt-3">Account number</div><div class="account-number" id="opayNumber">8085712095</div>
+            <button class="copy-btn mt-2" onclick="copyAccount('8085712095', this)"><i class="bi bi-copy me-1"></i> Copy account number</button>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
+          <div class="give-card">
+            <div class="d-flex align-items-center gap-3 mb-4"><div class="bank-logo uba">UBA</div><div><div class="account-name">United Bank for Africa</div><div class="h5 mb-0" style="font-family:'Cormorant Garamond';color:var(--burgundy)">Bank transfer</div></div></div>
+            <div class="account-name">Account name</div><div class="account-number">Nwanozie Promise</div>
+            <div class="account-name mt-3">Account number</div><div class="account-number" id="ubaNumber">2078049213</div>
+            <button class="copy-btn mt-2" onclick="copyAccount('2078049213', this)"><i class="bi bi-copy me-1"></i> Copy account number</button>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="wishlist">
+            <div class="section-kicker" style="color:var(--lime)">Optional</div>
+            <h3 class="mt-2">Our home wishlist</h3>
+            <p style="color:rgba(255,255,255,.65);font-size:.82rem;line-height:1.8">If you prefer a physical gift, these are some of the things that would be meaningful as we build our home together.</p>
+            <ul class="p-0 mt-4 mb-0">
+              <li><i class="bi bi-heart-fill"></i> Kitchen appliances & cookware</li>
+              <li><i class="bi bi-heart-fill"></i> Home electronics</li>
+              <li><i class="bi bi-heart-fill"></i> Bedding & bedroom items</li>
+              <li><i class="bi bi-heart-fill"></i> Home organisation & décor</li>
+              <li><i class="bi bi-heart-fill"></i> Any item you feel led to bless us with</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
+          <div class="give-card d-flex flex-column justify-content-center">
+            <div class="section-kicker">From our hearts</div>
+            <h3 style="font-size:2.5rem;color:var(--burgundy);margin-top:10px">Thank you.</h3>
+            <p class="give-note mt-2">There is no obligation to give. Come with your prayers, your joy and your presence. If you choose to bless us, we receive it with gratitude and will remember the kindness behind it.</p>
+            <div class="mt-4 small text-secondary"><i class="bi bi-shield-heart me-2" style="color:var(--lime-dark)"></i>Please confirm account details before transferring.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" style="background:#fff; padding-top:75px; padding-bottom:75px;">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="section-kicker">RSVP · 31 October 2026</div>
+          <h2 class="section-title mt-3">Will you <span class="script" style="color:var(--burgundy-soft)">join us?</span></h2>
+          <p class="section-intro mb-0">Please let us know if you will be celebrating with us at the solemnization of Holy Matrimony. For RSVP and guest-registration enquiries, reach out to either of our contacts.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="intro-card py-4">
+            <div class="d-flex justify-content-between align-items-center gap-3 py-2 border-bottom">
+              <div><div class="account-name">Faith</div><div class="h5 mb-0" style="font-family:'Cormorant Garamond';color:var(--burgundy)">+234 702 599 1765</div></div>
+              <a class="btn btn-lime" href="tel:+2347025991765">Call</a>
+            </div>
+            <div class="d-flex justify-content-between align-items-center gap-3 pt-3">
+              <div><div class="account-name">Evelyn</div><div class="h5 mb-0" style="font-family:'Cormorant Garamond';color:var(--burgundy)">+234 814 500 4568</div></div>
+              <a class="btn btn-lime" href="tel:+2348145004568">Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container text-center">
+    <div class="eyebrow">31 October 2026 · Lagos</div>
+    <div class="script mt-3">Prudence & Promise</div>
+    <p class="mt-3 mb-0" style="max-width:620px;margin-left:auto;margin-right:auto;line-height:1.8">The families of Mr & Mrs Prosper Emudianughe and Mr & Mrs Matthew Nwanozie invite you to celebrate with them as their children begin this new chapter.</p>
+    <div class="footer-rule"></div>
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <span>© 2026 Prudence & Promise</span>
+      <span>Made with love in Lagos.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- GLightbox -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
+
+<script>
+  AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic', offset: 60 });
+  const lightbox = GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true });
+
+  const nav = document.getElementById('mainNav');
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+    backTop.classList.toggle('show', window.scrollY > 600);
+  });
+  backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // Close the mobile menu after selecting a section.
+  document.querySelectorAll('#navMenu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
+    });
+  });
+
+  async function copyAccount(number, button) {
+    try {
+      await navigator.clipboard.writeText(number);
+      const original = button.innerHTML;
+      button.innerHTML = '<i class="bi bi-check2 me-1"></i> Copied';
+      setTimeout(() => button.innerHTML = original, 1800);
+    } catch (e) {
+      alert('Account number: ' + number);
+    }
+  }
+</script>
+</body>
+</html>
